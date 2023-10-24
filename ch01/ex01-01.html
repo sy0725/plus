@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        // console.log("Hello Javescript - 5");
+        var btn = document.querySelector("button");
+        btn.addEventListener("click", (event) => {
+          console.log("버튼 클릭", event.clientX, event.clientY);
+        });
+        // 여기서 실행이 안되는 이유는 JS엔진은 위에서 부터 아래로가는 런타임환경이기에 btn 이 호출하는 button 태그는 아래 있기에 실행이 x
+      };
+    </script>
+    <script src="ex01-19.js"></script>
+  </head>
+  <body>
+    <h1>Hello Javascript - 3</h1>
+    <button>클릭</button>
+
+    <script type="text/javascript">
+      // console.log("Hello Javescript - 4");
+      var btn = document.querySelector("button");
+      btn.addEventListener("click", (event) => {
+        console.log("버튼 클릭", event.clientX, event.clientY);
+      });
+
+      // 그렇기에 button 태그보다 아래있어야 실행이 가능하다.
+    </script>
+  </body>
+</html>
