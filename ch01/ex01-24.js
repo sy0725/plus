@@ -29,5 +29,13 @@ sum(numbers[0], numbers[1]); // 30
 sum(...numbers); // 30
 
 // 배열 결합
+var arr1 = [100, 200];
+var arr2 = [300, 400];
+var arr3 = [...arr1, ...arr2];
+console.log(arr3); // [100, 200, 300, 400]
 
 // 객체 결합
+var obj1 = { id: 1, title: "js 공부", done: false };
+var obj2 = { id: 2, content: "할 수 있 다!", date: "2023-10-25" };
+var obj3 = { ...obj1, ...obj2 };
+console.log(obj3); // 객체가 합해져서 들어온다 , id 는 덮어씌어저서 2로 변경
