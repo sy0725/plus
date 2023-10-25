@@ -23,28 +23,38 @@ var arr2 = {
   push: function (elem) {
     // 맨 뒤에 지정한 elem를 추가한다.
     // length 1 증가시킨다.
-    arr2[arr2.length] = elem;
-    arr2.length++;
+    // this[this.length] = elem;
+    // this.length++;
+
+    // var tmpArr = [];
+    // tmpArr.push.call(this, elem);
+
+    // prototype : 배열의 모든 메소드는 Array.prototype 속성에 정의되어 있음
+    Array.prototype.push.call(this, elem);
   },
   shift: function () {
     // 배열의 첫번째 요소를 삭제하고 반환한다.
     // length를 1 감소시킨다.
-    let first = arr2[0];
-    for (let i = 0; i < arr2.length - 1; i++) {
-      arr2[i] = arr2[i + 1];
-    }
-    arr2.length--;
-    delete arr2[arr2.length];
+    // let first = this[0];
+    // for (let i = 0; i < this.length - 1; i++) {
+    //   this[i] = this[i + 1];
+    // }
+    // this.length--;
+    // delete this[this.length];
 
-    return first;
+    // return first;
+
+    return Array.prototype.shift.call(this);
   },
   pop: function () {
     // 배열의 마지막 요소를 삭제하고 반환한다.
     // length를 1 감소시킨다.
-    let last = arr2[arr2.length - 1];
-    arr2.length--;
-    delete arr2[arr2.length];
-    return last;
+    // let last = this[this.length - 1];
+    // this.length--;
+    // delete this[this.length];
+    // return last;
+
+    return Array.prototype.pop.call(this);
   },
 };
 arr2.push("black");

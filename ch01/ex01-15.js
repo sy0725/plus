@@ -16,6 +16,7 @@ console.log("arr", arr);
 // begin이 음수일 경우 배열의 뒤에서 부터 복사
 // end 생략시 마지막까지 복사
 // 원본 데이터 유지
+
 var arr2 = arr.slice(1, 3); // one, two
 var arr2 = arr.slice(-3, -1); // two, three
 var arr2 = arr.slice(2); // two, three, four
