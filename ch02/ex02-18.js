@@ -1,5 +1,15 @@
-var Score = function(kor, eng, math){
-  
+var Score = function (kor, eng, math) {
+  this.kor = kor;
+  this.eng = eng;
+  this.math = math;
+
+  this.sum = function () {
+    return this.kor + this.eng + this.math;
+  };
+
+  this.avg = function () {
+    return this.sum() / 3;
+  };
 };
 
 // kim은 점수가 각각 100, 90, 80이다.
