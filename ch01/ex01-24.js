@@ -1,8 +1,32 @@
 // 전개 연산자
-var colors = ['two', 'three', 'four'];
-var user = {name: '김철수', age: 30};
+var colors = ["two", "three", "four"];
+// var newColors = colors;
+// colors.unshift("one");
+// newColors.push("five");
 
+var newColors = ["one", ...colors, "five"]; // 복사 뿐만아니고 추가도 가능하다 , 새로운 배열이 만들어 진다
+console.log(newColors, colors === newColors); // ['one',"two", "three", "four", 'five'] , false
+
+if (colors !== newColors) {
+  console.log("리렌더링"); // 리렌더링
+}
+
+var user = { name: "김철수", age: 30, done: false };
+var newUser = { ...user, phone: "01088888888", age: user.age + 1, done: true }; // 안에 값도 바꿀 수 있다.
+
+console.log(newUser, user === newUser); // { name: "김철수", age: 31 , phone : '0108888888' , done : true} , false // false 의 이유는 새로운 배열이 만들어져서
+
+if (user !== newUser) {
+  console.log("리렌더링"); // 리렌더링
+}
 // 함수에서 사용
+
+function sum(x, y) {
+  console.log(x + y);
+}
+var numbers = [10, 20];
+sum(numbers[0], numbers[1]); // 30
+sum(...numbers); // 30
 
 // 배열 결합
 
