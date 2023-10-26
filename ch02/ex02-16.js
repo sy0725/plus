@@ -16,7 +16,9 @@ function smallest(nums) {
   // return min;
 
   // return Math.min.apply(this, nums);
-  return Math.min(...nums);
+  // return Math.min(...nums);
+
+  return nums.min();
 }
 
 console.log(smallest([10, 100])); // 10
