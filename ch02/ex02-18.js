@@ -4,7 +4,7 @@ var Score = function (kor, eng, math) {
   this.math = math;
 
   this.sum = function () {
-    return this.kor + this.eng + this.math;
+    return kor + eng + math;
   };
 
   this.avg = function () {
