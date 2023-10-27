@@ -18,7 +18,6 @@ var isPrime = function (num) {
     return prime;
   }
 };
-<s></s>;
 console.time("소요시간");
 console.log("3 -> ", isPrime(3));
 console.log("4 -> ", isPrime(4));
