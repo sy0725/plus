@@ -11,7 +11,7 @@
         axios.defaults.timeout = 2000;
         axios.defaults.headers.common["Authorization"] = "abc1q23";
 
-        // 요청 인터셉트 추가
+        // 요청 인터셉터 추가
         axios.interceptors.request.use(
           function (config) {
             console.log("요청 interceptor");
@@ -19,7 +19,7 @@
             return config;
           },
           function (err) {
-            console.error("요청 실패", err);
+            console.error("요청 실패.", err);
             return Promise.reject(err);
           }
         );
@@ -31,7 +31,7 @@
             return response;
           },
           function (err) {
-            console.log("에러 메세지 응답", err);
+            console.error("에러 메세지 응답", err);
             return Promise.reject(err);
           }
         );
